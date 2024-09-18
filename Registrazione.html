@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>Modulo di registrazione</title>
+
+ 	<style>
+ 		div.intestazione {
+	background-color: White;
+	text-align: center;
+	margin-bottom: 0px;
+	border: 3px solid green;
+	border-top-right-radius: 10px; 
+	border-top-left-radius: 10px; 
+}
+
+div.c {
+	background-color: darkgoldenrod;
+	margin: 0px; 
+}
+
+div.contenuto {
+	border: 0px;
+	border-radius: 10px;
+	padding: 20px 250px;
+	background-color: transparent;
+	margin: 80px 300px 0px 400px;
+}
+
+#l {
+  text-align: center;
+  color: #F0FFFF;
+  text-shadow: 4px 4px 4px black;
+}
+ 	</style>
+ </head>
+
+ <body>
+ 
+	<div class="intestazione">
+ 		<h1>Registrazione</h1>
+	</div>
+
+	<div class="c">
+		<br><br>
+   		<h2 id="l">Inserisci i tuoi dati e Registrati</h2>
+    	<div class="contenuto">
+    		<form action="/action_page.php" method="post">
+    			<fieldset>
+    				<legend>I tuoi dati:</legend>
+		  			<label for="nome">Nome:</label><br>
+		  			<input type="text" id="nome" name="nome" autofocus required><br>
+		  			<label for="cognome">Cognome:</label><br>
+		  			<input type="text" id="cognome" name="cognome" autofocus required><br>
+		  			<label for="email">Email:</label><br>
+		  			<input type="email" id="email" name="email"><br>
+		  			<label for="Password">Password:</label><br>
+		  			<input type="Password" id="Password" name="Password"><br>
+		  			 <p>Quale browser usi più spesso?    <input list="browsers" name="browser">
+					  <datalist id="browsers">
+					    <option value="Internet Explorer">
+					    <option value="Firefox">
+					    <option value="Chrome">
+					    <option value="Opera">
+					    <option value="Safari">
+					  </datalist></p>
+		  			<label for="phone">Numero di telefono</label><br>
+		  			<input type="tel" id="phone" name="phone"><br><br>
+		  			<label for="Auto">Quante auto possiedi?</label>
+		  			<select id="Auto" name="Auto" size="2">
+			    		<option value="0">0</option>
+			    		<option value="1" selected>1</option>
+			    		<option value="2">2</option>
+			    		<option value="other">di più</option>
+			  		</select><br><br>
+		  			<label for="Auto">Quale auto possiedi?</label>
+		  			<select id="Macchina" name="Macchina" size="3" multiple>
+			    		<option value="Audi">Audi</option>
+			    		<option value="BMW">BMW</option>
+			    		<option value="Fiat">Fiat</option>
+			    		<option value="Jeep">Jeep</option>
+			  			<option value="Land Rover">Land Rover</option>
+			  			<option value="Mercedes">Mercedes</option>
+			  			<option value="Smart">Smart</option>
+			  			<option value="Volkswagen">Volkswagen</option>
+		  			</select><br><br>
+		  			<textarea name="message" rows="10" cols="30">Lasciaci un commento</textarea>
+		  			<br><br>
+		  			<label for="files">Inserisci una tua immagine</label>
+		  			<input type="file" id="files" name="files" multiple><br><br>
+		  			<input type="submit" value="Invia">
+		  		</form>
+		  			<p>Quanto ti consideri bravo in Informatica?</p>
+					<form action="/action_page.php"
+					oninput="x.value=parseInt(a.value)">
+					  
+					  <input type="range" id="a" name="a" value="50">
+					  
+					  <output name="x" for="a"></output>
+					  <br><br>
+					  <button type="button" onclick="alert('Perfetto!!!')">Fatto</button>
+					  <br><br>
+					</form>
+		  		</fieldset>
+			 
+
+		</div>
+	</div>
+</body>
+

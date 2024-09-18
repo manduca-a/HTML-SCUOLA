@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>Registrazione</title>
+
+ 	<style>
+ 		div.intestazione {
+	background-color: White;
+	text-align: left;
+	margin-bottom: 0px; 
+	padding-left: 50px;
+}
+
+div.c {
+	background-color: cyan;
+	margin: 0px; 
+}
+
+div.contenuto {
+	border: 0px;
+	border-radius: 10px;
+	padding: 0px 0px;
+	background-color: transparent;
+	margin: 50px 50px 0px 50px;
+}
+
+.t {
+  text-align: left;
+  margin: 50px;
+}
+ 	</style>
+ </head>
+
+ <body>
+ 
+	<div class="intestazione">
+ 		<h1>Registrati</h1>
+	</div>
+
+	<div class="c">
+		<br><br>
+   		<p class="t">Gli utenti possono registrarsi da soli o puoi creare manualmente utenti qui.</p>
+    	<div class="contenuto">
+    		<form action="/action_page.php" method="post">
+	  			<label for="nome">Nome utente</label>
+	  			<input type="text" id="nome" name="nome" autofocus required><br>
+	  			<label for="email">Email</label>
+	  			<input type="email" id="email" name="email" required><br>
+	  			<label for="Password">Password</label>
+	  			<input type="Password" id="Password" name="Password" reqired><br>
+	  			<label for="PPassword">Ripeti la Password</label>
+	  			<input type="Password" id="PPassword" name="PPassword" required><br><br>
+	  			<input type="checkbox" id="invia" name="invia" value="email">
+				<label for="invia"> Invia questi dati via email</label><br>
+				<input type="submit" value="Invia" onclick="alert('Controlla di aver inserito i dati correttamente')">
+			<br><br>
+			</form>
+		</div>
+	</div>
+</body>
+

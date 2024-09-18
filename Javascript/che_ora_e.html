@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ora attuale</title>
+
+	<script type="text/javascript">
+		function mostraOra() {
+			var data, ora, minuti, giorno, giornom, mese, anno;
+			data = new Date();
+			ora = data.getHours();
+			minuti = data.getMinutes();
+			secondi = data.getSeconds();
+			giorno = data.getDay();
+			switch (data.getDay()) 
+			{
+			  case 0:
+			    day = "Domenica";
+			    break;
+			  case 1:
+			    day = "Lunedì";
+			    break;
+			  case 2:
+			    day = "Martedì";
+			    break;
+			  case 3:
+			    day = "Mercoledì";
+			    break;
+			  case 4:
+			    day = "Giovedì";
+			    break;
+			  case 5:
+			    day = "Venerdì";
+			    break;
+			  case  6:
+			    day = "Sabato";
+			}
+			
+			giornom = data.getDate();
+			mese = data.getMonth();
+			switch (data.getMonth()) {
+			  case 0:
+			    month = "Gennaio";
+			    break;
+			  case 1:
+			    month = "Febbraio";
+			    break;
+			  case 2:
+			    month = "Marzo";
+			    break;
+			  case 3:
+			    month = "Aprile";
+			    break;
+			  case 4:
+			    month = "Maggio";
+			    break;
+			  case 5:
+			    month = "Giugno";
+			    break;
+			  case  6:
+			    month = "Luglio";
+			  case  7:
+			    month = "Agosto";
+			  case  8:
+			    month = "Settembre";
+			  case  9:
+			    month = "Ottobre";
+			  case  10:
+			    month = "Novembre";
+			  case  11:
+			    month = "Dicembre";
+			}
+			anno = data.getFullYear();
+			document.open();
+			if ((ora >= 5) && (ora < 13)) {
+				document.write("Buogiorno! ");
+			}
+			if ((ora >= 13) && (ora <= 18)) {
+				document.write("Buon Pomeriggio! ");
+			}
+			if ((ora > 18) && (ora < 23)) {
+				document.write("Buonasera! ")
+			}
+			if ((ora >=23) && (ora < 5)) {
+				document.write("Buonanotte! ")
+			}
+			document.write("Che ore sono? ");
+			document.write(" Sono le " + ora + " , " + minuti + " minuti, " + secondi + "  secondi " + " di " + day + "  " + giornom + "  " + month + "  "+ anno);
+			document.close();
+			setTimeout("mostraOra()", 1000);
+			
+		}
+	</script>
+</head>
+<body onload="mostraOra()">
+	
+</body>
+</html>

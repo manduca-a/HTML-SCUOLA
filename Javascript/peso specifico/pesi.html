@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Pesi</title>
+
+	<script type="text/javascript" src="calcoli.js">
+		
+	</script>
+
+	<style type="text/css">
+		
+		body {
+			text-align: center;
+			background-image: url(https://i.pinimg.com/originals/0b/06/39/0b06397a3199bee4a5922ee4488ebf5a.jpg); ;
+		}
+
+		.i {
+			color: lightblue;
+		}
+
+		.dati {
+			width: 160px;
+			height: 20px;
+			text-align: right;
+		}
+
+		.risultati {
+			color: lightblue;
+			font-size: 210%;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.bottone {
+			width: 100px;
+			height: 40px;
+			text-align: center;
+		}
+
+		.peso {
+			color: white;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<form>
+		<br><br><br><br>
+		<p class="i"><b>Volume </b> <input type="text" id="volume" class="dati">
+			<select id="unit">
+				<option>m&sup3;</option>
+				<option>dm&sup3;</option>
+				<option>cm&sup3;</option>
+			</select>
+			<select id="materiali">
+				<option>Acciaio</option>
+				<option>Alluminio</option>
+				<option>Ottone</option>
+				<option>Rame</option>
+			</select>
+		</p>
+
+		<p>
+			<input type="button" value="Calcola" class="bottone" onclick="calcolaPeso()">
+		</p>
+
+		<br><br><br><br>
+		<p id="peso" class="risultati"></p>
+
+
+
+	</form>
+
+</body>
+
+</html>

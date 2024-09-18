@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Vendita online di prodotti per la casa e casalinghi</title>
+ <meta name="description" content="Casalinghi discount offre una vasta scelta di prodotti per la casa a prezzi bassi.">
+ <script src='https://kit.fontawesome.com/a6d128a352.js'></script>
+ <style>
+ body { 
+  background-image: url(rsz_1800252.png);
+}
+ h1 {
+  color: grey;
+  background-color: transparent;
+  }
+  h3 {
+   color: black;
+   text-align:center;
+  }
+  
+div.fixed {
+  position: fixed;
+  bottom: 1;
+  right: 1;
+  width: 300px;
+}
+
+div.fixe {
+  position: fixed;
+  border-radius: 10px;
+  background-color: grey;
+  bottom: 1;
+  right: 0;
+  width: 300px;
+  height: 350px;
+  border: 4px;
+  }
+  
+  div.fixer {
+  position: fixed;
+  border-radius: 10px;
+  background-color: grey;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 30px;
+  border: 4px;
+  margin: 100px 100px;
+  }
+  
+  div.f {
+  border-radius: 10px;
+  padding: 25px 100px;
+  background-color: grey;
+  margin: 10px 300px;
+}
+
+div.fo {
+  padding: 1px 100px;
+  background-color: transparent;
+  margin: 10px 400px;
+}
+
+ ul {
+  list-style-type:none;
+ }
+ li {
+  font-size:260%;
+ }
+     a:link {
+  color: orange;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: orange;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: orange;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+button {
+  align: center;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+button:active {
+  background-color: orange;
+}
+
+button:visited {
+  background-color: orange;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+
+ </head>
+ 
+ <body>
+  
+  <h1 style=text-align:center>Richiesta Informazioni</h1>
+  
+  <div class="fixed">
+ 
+	<ul>
+	
+		<li><a href="Homepage.html">Home</a></li>
+		<li><a href="Articoli.html">Articoli</a></li>
+		<li><a href="Carrello.html">Carrello</a></li>
+		<li><a href="ChiSiamo.html">Chi Siamo</a></li>
+		<li><a href="DoveSiamo.html">Dove Siamo</a></li>
+		<li><a href="RichiestaInfo.html">Richiesta <br> Informazioni</a></li>
+		<li><a href="LinkUtili.html">Link Utili</a></li>
+	
+	</ul>	
+ </div>
+<div class="f">
+    
+	<p style="font-size:20px; color: orange;">Tel / Whatsapp: 339 1527702 <br> Email: <a href="mailto:info@casalinghidiscount.it">info@casalinghidiscount.it </a><br> P.IVA: 01727220889</p>
+	
+	  <div class="container">
+ 
+  <div class="row">
+    <div class="col-25">
+      <label for="nme">Nome</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="nme" name="nome" placeholder="Il tuo nome..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="cnome">Cognome</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="cnome" name="cognome" placeholder="Il tuo cognome.">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="mail">Email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="mail" name="email" placeholder="La tua email..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="regione">Regione</label>
+    </div>
+    <div class="col-75">
+      <select id="regione" name="regione">
+        <option value="sicilia">Sicilia</option>
+        <option value="calabria">Calabria</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="problema">Problema</label>
+    </div>
+    <div class="col-75">
+      <textarea id="problema" name="problema" placeholder="Descrivi il tuo problema.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Invia">
+  </div> 
+</div>
+ 
+ 
+ </body>
+ 
+ </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+ 
+ 	<title>Dati</title>
+
+ 	<style>
+
+		div.c {
+			background-color: green;
+			margin: 0px; 
+		}
+
+		div.contenuto {
+			border: 0px;
+			border-radius: 10px;
+			padding: 20px 250px;
+			background-color: transparent;
+			margin: 80px 300px 0px 400px;
+		}
+
+		#l {
+			text-align: center;
+			color: #F0FFFF;
+			text-shadow: 4px 4px 4px black;
+		}
+
+ 	</style>
+
+ </head>
+
+ <body>
+
+	<div class="c">
+
+		<br><br>
+   		
+   		<h2 id="l">Inserisci i tuoi dati</h2>
+    	
+    	<div class="contenuto">
+    	
+    		<form action="/action_page.php" method="post">
+    	
+    			<label for="nome">NOME </label><br>
+	  			<input type="text" name="nome" size="25"><br><br>
+	  			
+	  			<label for="cognome">COGNOME </label><br>
+	  			<input type="text" name="cognome" size="30"><br><br>
+	  			
+	  			<label for="datanascita">DATA DI NASCITA </label><br>
+	  			<input type="date" name="datanascita"><br><br>
+	  			
+	  			<label for="email">INDIRIZZO EMAIL</label><br>
+	  			<input type="email" name="email" required><br><br>
+	  			
+	  			<label for="pwd">PASSWORD </label><br>
+	  			<input type="Password" name="pwd" size="20" maxlength="12"><br><br>
+	  			<input type="hidden" name="codicepost" value="143354_2">
+	  			<input type="button" value="Salva">
+	  			<button type="button">fai clic qui</button><br><br>
+	  			
+	  			<label for="carta">Scegli la carta di credito</label><br>
+	  			<input type="radio" name="carta" value="visa" checked>Visa<br>
+	  			<input type="radio" name="carta" value="mastercard">Mastercard<br><br>
+	  			
+	  			<label for="lingua">Lingue conosciute</label><br>
+	  			<input type="checkbox" name="lingua" value="ita" checked>Italiano<br>
+	  			<input type="checkbox" name="lingua" value="ing">Inglese<br>
+	  			<input type="checkbox" name="lingua" value="fra">Francese<br><br>
+	  			
+	  			<textarea name="richiesta" rows="10" cols="40">scrivi qua la tua domanda</textarea>
+	  			<br><br>
+	  			
+	  			<label for=">Regione">Dove ti trovi?</label>
+	  			<select name="Regione">
+		    		<option value="1" selected>nord</option>
+		    		<option value="2">centro</option>
+		    		<option value="3">sud e isole</option>
+		    		<option value="other">di più</option>
+		  		</select><br><br>
+	  			
+	  			<label for="sito">SITO WEB</label><br>
+	  			<input type="url" name="sito"><br><br>
+	  			
+	  			<label for="tel">NUMERO DI TELEFONO</label><br>
+	  			<input type="tel" name="tel"><br><br>
+	  			
+	  			0%   <input type="range" name="perc" min="0" max="100" step="1">   100%<br><br>
+	  			
+	  			CARICA IL TUO CV<input type="file" name="files" multiple><br><br>
+	  			<input type="submit" value="Invia">
+	  			<input type="reset" name="annulla" value="Cancella i dati">
+	  	
+	  		</form>
+
+		</div>
+
+	</div>
+
+ </body>
+
+</html>

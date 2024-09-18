@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Equazione di grado 2</title>
+
+	<style type="text/css">
+
+		body {
+			background-color: green;
+			text-align: center;
+			font-family: Lucida sans;
+			font-size: 2vw; 
+		}
+
+		#title{
+			font-weight: bold;
+		}
+
+		#bu {
+			width: 90%;
+			font-family: Verdana;
+			font-size: 16px;
+			background-color: #0060a0;
+			border: 0px;
+			padding: 5px;
+		}
+
+		#bu:hover {
+			background-color: white;
+			color: #4169e1;
+		}
+
+		#output {
+			color: blue;
+			font-weight: bold;
+		}
+
+		#output1 {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function calcola() {
+			var a = parseInt(document.getElementById('a').value);
+			var b = parseInt(document.getElementById('b').value);
+			var c = parseInt(document.getElementById('c').value);
+			var delta = (b*b)-(4*a*c);
+			var x1 = parseInt(-b - Math.sqrt(delta))/(2*a);
+			var x2 = parseInt(-b + Math.sqrt(delta))/(2*a);
+			if (delta < 0) {
+				alert("Il delta è minore di zero");
+				document.getElementById('output').innerHTML = "Impossibile!!";
+			document.getElementById('output1').innerHTML = "Impossibile!!";
+				return;
+			}
+			document.getElementById('output').innerHTML = "x1 è uguale a " + x1 ;
+			document.getElementById('output1').innerHTML = "x2 è uguale a " + x2 ;
+		}
+	</script>
+</head>
+<body>
+	<p id="title">Risoluzione equazione di secondo grado</p><br><br>
+	Inserisci il valore di a: <input type="text" id="a" required autofocus><br>
+	Inserisci il valore di b: <input type="text" id="b" required><br>
+	Inserisci il valore di c: <input type="text" id="c" required><br>
+	<br><br>
+	<button onclick="calcola()" id="bu"> Execute</button><br><br>
+	<p id="output"></p><br><p id="output1"></p>
+</body>
+</html>

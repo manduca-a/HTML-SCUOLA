@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      h1 {
+        margin: 0px;
+      }
+
+      div.intestazione {
+      background-color: White;
+      text-align: center;
+      margin-bottom: 0px;
+      border: 3px solid green;
+      border-top-right-radius: 10px; 
+      border-top-left-radius: 10px; 
+      height: 50px;
+      }
+
+      div.c {
+        background-color: teal;
+        margin: 0px; 
+        border-bottom-right-radius: 10px; 
+        border-bottom-left-radius: 10px; 
+      }
+
+      div.contenuto {
+        border: 0px;
+        border-radius: 10px;
+        padding: 20px 250px;
+        background-color: transparent;
+        margin: 80px 300px 0px 400px;
+      }
+
+      #l {
+        text-align: center;
+        color: #F0FFFF;
+        text-shadow: 4px 4px 4px black;
+      }
+          
+      #calc input {
+        width:40px;
+        height:40px;
+        margin:1px;
+        font-size:15px;
+        border:none;
+      }
+      #calc input:hover{
+        background-color:grey;
+      }
+      #calc input:active{
+        background-color:#aaa;
+      }
+      #calcolatrice{
+        background-color:#eee;
+        width:fit-content;
+        padding:10px 5px;
+        margin:150px 200px;
+        box-shadow:2px 9px 10px #333;
+      }
+      .area {
+        width:166px;
+        height:30px;
+        padding:2px;
+        text-align:right;
+        font-size:20px
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intestazione">
+    <h1 style="font-family:Bradley Hand, cursive;">Operazioni</h1>
+  </div>
+
+  <div class="c">
+    <br><br>
+      <h2 id="l">Inserisci i numeri e scegli un'operazione da eseguire</h2>
+      <div class="contenuto">
+    <div id="calcolatrice">
+      
+      <form name="form">
+        <input class="area" name="area" value="" placeholder="0">
+        <table id="calc">
+          <tr>
+            <td><input type="button" value="C" onclick="reset()"></td>
+            <td><input type="button" value="<" onclick="cancella();"></td>
+            <td><input type="button" value="/" onclick="scrivi('/');"></td>
+            <td><input type="button" value="x" onclick="scrivi('*');"></td>
+          </tr>       
+          <tr>
+            <td><input type="button" value="7" onclick="scrivi(7);"></td>
+            <td><input type="button" value="8" onclick="scrivi(8);"></td>
+            <td><input type="button" value="9" onclick="scrivi(9);"></td>
+            <td><input type="button" value="-" onclick="scrivi('-');"></td>
+          </tr>      
+          <tr>
+            <td><input type="button" value="4" onclick="scrivi(4);"></td>
+            <td><input type="button" value="5" onclick="scrivi(5);"></td>
+            <td><input type="button" value="6" onclick="scrivi(6);"></td>
+            <td><input type="button" value="+" onclick="scrivi('+');"></td>
+          </tr>      
+          <tr>
+            <td><input type="button" value="1" onclick="scrivi(1);"></td>
+            <td><input type="button" value="2" onclick="scrivi(2);"></td>
+            <td><input type="button" value="3" onclick="scrivi(3);"></td>
+            <td rowspan="2"><input style="height:84px" type="button" value="=" onclick="esegui();"></td>
+          </tr>  
+          <tr>
+            <td colspan="2"><input style="width:84px" type="button" value="0" onclick="scrivi(0);" ></td>
+            <td><input type="button" value=","onclick="scrivi('.');"></td>
+          </tr>  
+        </table>
+      </form>
+    </div>
+  </div>
+        <script>
+      function scrivi(n){
+        document.form.area.value = document.form.area.value+n
+      }
+      function esegui() {
+        var c = document.form.area.value;
+        if (c){
+          document.form.area.value = eval(c);
+        }
+      }
+      function reset() {
+        document.form.area.value = '';
+      }
+      function cancella() {
+        var a = document.form.area.value;
+        document.form.area.value = a.substring(0, a.length-1);
+      }
+    </script>
+  </body>
